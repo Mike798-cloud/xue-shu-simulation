@@ -1,0 +1,131 @@
+/* 澜序学府 · 像素人物与校务卷宗界面。保留竖屏单列，不使用网页后台样式。 */
+:root{--paper:#efe7d2;--paper2:#fff8e6;--ink:#292e32;--line:#a9a38e;--red:#863e3d;--red2:#a34d49;--green:#3d645b;--muted:#676d66;--gold:#b48b4f;--pixel-border:#394d4b}
+html,body{background:#243d3a;color:var(--ink)}
+.phone-frame{background:#f0eadb;background-image:repeating-linear-gradient(0deg,transparent 0 43px,#38554a08 44px 45px);box-shadow:0 0 0 3px #1c3331}
+.game-head{background:#2d4b46;border-bottom:4px double #bfa676;color:#fbf2df}
+.head-seal{background:#bd9657!important;color:#283e37!important}
+.status-strip{background:#e4e6d7;border-bottom:2px solid #486457}
+.status-strip small{color:#5b665c}
+.navbar,.bottom-nav{background:#28443e!important;border-top:3px solid #bd955d!important}
+.navbtn.sel{background:#395c50!important;color:#ffeab9!important;outline:1px solid #d0b277!important}
+.folio{background:#fffaf0;border:1px solid #aeb59e;box-shadow:3px 3px 0 #c7cab8;margin-bottom:16px;padding:15px 13px 17px}
+.folio-caption{border-bottom:2px solid #c6cbb6!important;color:#385a51!important}
+.folio-caption i{color:#a04a3f!important}
+.chapter-stamp{background:#34564c!important;color:#f5dfaa!important;border-color:#ad955e!important}
+.chapter-intro{background:#e0e7d7;border:2px solid #95aaa0;box-shadow:inset 0 0 0 3px #f0f1e5;text-align:left}
+.folio-btn,.action-row,.person-card,.event-choices button,.topic-tab{border-radius:2px!important;box-shadow:2px 2px 0 #6b75601f}
+.folio-btn{min-height:43px}
+.end-turn{background:#7a3f39;border:2px solid #5d3533;box-shadow:3px 3px 0 #b8aa8b;min-height:50px}
+.action-row{background:#f4f3e8!important;border:1px solid #aeb7a1!important;min-height:138px}
+.action-row:active,.folio-btn:active,.person-card:active{transform:translateY(2px);box-shadow:none}
+.action-icon{color:#416257}
+.action-cost{color:#873f40}
+.strategy-item{background:#e7eee2;border-left-color:#517668}
+.objective{border-left-color:#7b4b42!important;background:#f2eddd!important}
+.person-card{background:#f6f7e9;border:1px solid #b8c1b0;min-height:78px}
+.menu-screen{border-left:6px solid #305048;border-right:6px solid #305048;background:#e5e6d5;background-image:repeating-linear-gradient(0deg,transparent 0 46px,#34574a0a 46px 47px)}
+.school-mark{border-color:#748b75;color:#43594d}
+.main-title h1{color:#244e48;text-shadow:2px 2px 0 #bdc6ad;font-size:44px}
+.main-title h2{color:#445a50}
+.menu-divider{color:#a27349}.menu-bottom{color:#657768}
+.create-screen{background:#e7e9d9}.paper-form{background:#fffaf0;border:2px solid #8eaa9d;box-shadow:4px 4px 0 #bdcabb}
+.paper-form label{line-height:1.5}.paper-form input,.paper-form select,.paper-form textarea{font-size:14px;max-width:100%;min-width:0;background:#fffef8;border:1px solid #829a88}
+.create-head{border-bottom-color:#879b8b}.register-seal{color:#8d5145;border-color:#8d5145}
+.scrim{background:#0c1d1ccc}.sheet-paper,.event-paper{background:#f6f5e7;border:5px double #7a9682}.sheet-paper h2,.event-paper h2{color:#5c493e}.event-choices button{background:#fcfbf1;border:1px solid #95a79a}.event-choices span{background:#527364}
+.sprite-face{position:relative;overflow:hidden;display:grid;align-items:end;justify-items:center;border:2px solid #49685c;background:#d6e4d8;width:58px;height:64px;padding:0;box-shadow:2px 2px 0 #a4b9a6;image-rendering:pixelated}
+.sprite-face.large{width:96px;height:112px}
+.sprite-face img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;image-rendering:pixelated;image-rendering:crisp-edges}
+.hero-portrait{display:flex;gap:13px;align-items:center;text-align:left;padding:10px 11px}
+.hero-portrait>div{flex:1;min-width:0}.hero-portrait .sprite-face{width:93px;height:104px;flex:none;background:#c2d6c4}
+.hero-portrait h1{font-size:19px;line-height:1.45;margin:0 0 5px}.hero-portrait p{margin:3px 0;font-size:12px;line-height:1.65}.hero-portrait .trait-caption{font-size:11px;color:#86473d;font-weight:800}
+.menu-scene{width:250px;height:158px;position:relative;display:flex;align-items:end;justify-content:center;gap:0;margin:26px 0 15px;border-bottom:5px double #91aa93;background:radial-gradient(ellipse at 50% 100%,#abc9b1 0%,transparent 62%)}
+.menu-scene img{height:154px;width:127px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(2px 3px 0 #7d9479);}
+.menu-scene img:last-child{margin-left:-10px;height:160px}
+.avatar-picker{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:9px 0 12px}
+.avatar-choice{display:flex!important;flex-direction:column;gap:4px!important;align-items:center;text-align:center!important;padding:7px 3px;background:#e6ebdf;border:2px solid #abbcac;cursor:pointer;margin:0!important;min-width:0;position:relative;font-weight:600!important}
+.avatar-choice:has(input:checked){border-color:#8b4c40;background:#fff1d9;box-shadow:inset 0 0 0 2px #d2b380}
+.avatar-choice input{position:absolute;opacity:0;width:1px!important;min-height:0!important;height:1px;padding:0!important;pointer-events:none}
+.avatar-choice:focus-within{outline:2px solid #30594a;outline-offset:2px}
+.avatar-thumb{width:75px;height:88px;background:#d9e6d5;display:grid;place-items:center}
+.avatar-thumb img{width:100%;height:100%;object-fit:contain;image-rendering:pixelated}
+.avatar-choice b{font-size:11px;line-height:1.4}.avatar-choice small{font-size:9px;color:#657367;font-weight:500}
+.avatar-choice.locked{filter:saturate(.22);opacity:.70;cursor:not-allowed}
+.form-subheading{font-size:13px;font-weight:900;letter-spacing:.08em;color:#38594f;border-bottom:2px solid #a8b9ad;padding:8px 0 7px;margin:20px 0 10px}
+.form-small{font-size:11px!important;text-align:left!important;margin:7px 0 14px!important;color:#647263!important;line-height:1.7}
+.identity-display{display:flex;align-items:center;gap:12px;padding:10px 0 16px}.identity-display>div{flex:1}.identity-display b{font-size:16px}.identity-display p{color:#8c4a40;font-weight:800}.identity-display small{color:#5c6d61;line-height:1.6;display:block}
+.talk-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.talk-topics button{font-size:12px;min-height:44px;min-width:0}
+.conversation-head{display:flex;align-items:center;gap:13px;margin-top:5px}.conversation-head>div{flex:1}.conversation-head h2{margin:4px 0}.conversation-head small{color:#627968}.conversation-head span{font-size:12px;color:#80583d}
+.dialogue-lead{background:#e5ede1;border-left:3px solid #618675;padding:14px;line-height:1.8!important;font-size:14px!important;color:#3d5349!important}
+.trait-hint{background:#f4e8d8;color:#865241!important;font-size:12px!important;padding:9px}
+.wardrobe-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.wardrobe-item{display:flex;flex-direction:column;align-items:center;gap:5px;background:#e7eee3;border:1px solid #a8b7a8;padding:9px 6px;min-width:0;text-align:center}.wardrobe-item>img{width:89px;height:99px;object-fit:contain;image-rendering:pixelated;background:#d5e4d7}.wardrobe-item strong{font-size:13px}.wardrobe-item small{font-size:10px;line-height:1.5;color:#66746a}.wardrobe-item .folio-btn{font-size:11px;width:100%;min-width:0;margin-top:auto}.wardrobe-item.locked{filter:saturate(.28);opacity:.7}.unlocked-status{font-weight:800;color:#48735b!important}
+.achievement-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.achievement-item{padding:10px;background:#edf1e6;border:1px dashed #a7b6a4;display:flex;flex-direction:column;gap:6px}.achievement-item b{font-size:11px}.achievement-item small{font-size:10px;line-height:1.6;color:#718073}.achievement-item.earned{border:1px solid #a7804a;background:#f7edda}.achievement-item.earned b{color:#83513e}
+@media(max-width:365px){.hero-portrait .sprite-face{width:73px;height:87px}.hero-portrait h1{font-size:16px}.avatar-thumb{width:62px;height:75px}.avatar-choice b{font-size:10px}.game-body{padding-left:8px;padding-right:8px}.navbtn{font-size:10px}.menu-scene{margin:15px 0 10px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.rank-competitors{background:#eaf0e6;border:1px solid #b1c5b5;padding:10px;margin-top:10px}.rank-competitors .data-line{padding:7px 0}.rank-competitors .data-line:first-child b{color:#873c3b}.rank-competitors .explain{font-size:11px}.review-notice{font-size:11px;color:#815346;background:#f7e8d4;padding:8px}
+.sprite-face .pixel-badge{position:absolute;right:0;bottom:0;min-width:17px;height:18px;display:grid;place-items:center;background:#874f3e;border:1px solid #f6d6a9;color:#f8e5bd;font-family:monospace;font-size:12px;font-weight:900;line-height:1}
+.badge-picker{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:6px 0 12px}.badge-option{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 3px;min-height:75px;background:#eff2e9;border:1px solid #aabaaa;color:#38574d;cursor:pointer}.badge-option>span{font-size:21px}.badge-option b{font-size:11px}.badge-option small{font-size:9px}.badge-option.selected{background:#f8ebd6;border-color:#97654e}.badge-option:disabled:not(.selected){opacity:.5;cursor:not-allowed}
+
+/* 3.0 视觉校准：旧校刊 / 像素学府。 */
+:root{--paper:#eadfc8;--paper2:#f7efdd;--ink:#292426;--line:#ad9b7f;--red:#6d3438;--red2:#8a4747;--green:#52665a;--muted:#6d665e;--gold:#aa824c;--pixel-border:#4a3c3e}
+html,body{background:#272629}
+.phone-frame{background:#e8ddc6;background-image:linear-gradient(#8a76520d 1px,transparent 1px);background-size:100% 32px;box-shadow:0 0 0 2px #151416,0 12px 36px #0007}
+.game-head{background:#4a2b31;border-bottom:4px solid #b18a56;color:#f7ead0}
+.head-top{color:#cfbfa4}.head-seal{background:#efe0c2!important;color:#6a3337!important;border:2px solid #6a3337!important}
+.status-strip{background:#ded0b7;border-bottom:2px solid #7f6c51}.status-strip>div{border-right-color:#baa98e}.status-strip small{color:#6b5f50}.status-strip b{color:#332c2b}.status-strip .ap-pill b{color:#70363a}
+.game-body{padding-top:13px}.chapter-stamp{color:#765841}.chapter-intro{background:#efe4ce!important;border:2px solid #9b8568!important;box-shadow:3px 3px 0 #c6b69a!important}.folio{background:#f8f0df!important;border:2px solid #b3a083!important;box-shadow:3px 3px 0 #c9b99d!important}.folio::after{display:none}.folio-caption{border-bottom:2px solid #b9a587;color:#3f3432}.folio-caption i{color:#733a3d}.objective{background:#eee0c8!important;border-left-color:#733a3d!important}
+.bottom-nav{background:#3b2a2d!important;border-top:3px solid #b28b58!important}.navbtn{color:#d9ccb3}.navbtn.sel{background:#6a3a3d!important;color:#ffe6b8!important;outline-color:#c39961!important}
+.folio-btn{background:#e6d8bf;border:2px solid #9e8a6d;color:#413638;box-shadow:2px 2px 0 #c4b398}.folio-btn:hover:not(:disabled){background:#ddc9a8}.folio-btn.primary{background:#73383d;border-color:#582a2e;color:#fff0d1}.folio-btn.dark{background:#494044}.folio-btn.selected{background:#58685b;color:#fff2d8;border-color:#405047}
+.action-row{background:#f0e5cf!important;border:2px solid #a99577!important;box-shadow:2px 2px 0 #c8b89b}.action-row:hover:not(:disabled){background:#e7d6b8!important}.action-icon{color:#6c3b3d!important}.action-cost{color:#75363b!important}.end-turn{background:#6f3439;border:2px solid #4e2529;box-shadow:3px 3px 0 #bba486}.end-turn:hover:not(:disabled){background:#814047}
+.meter-track{background:#d9cbb1}.meter-track i{background:#596d60!important}.topic-tab.active{background:#6a373b!important;border-color:#6a373b!important}.strategy-item{background:#eee2cb!important;border-left-color:#7d4b45!important}.person-card{background:#efe6d4!important;border:2px solid #a9977d!important}.sprite-face{background:#d9c9a9!important;border-color:#5b4746!important;box-shadow:2px 2px 0 #ae9b7c!important}.menu-screen{background:#dac9a9!important;background-image:linear-gradient(#7e674214 1px,transparent 1px)!important;background-size:100% 38px!important;border-color:#3a2d2c!important}.school-mark{border-color:#816748;color:#55453b}.main-title h1{color:#6b3437!important;text-shadow:2px 2px 0 #c7ad82!important}.main-title h2{color:#51433d!important}.menu-scene{background:none!important;border-bottom-color:#8c7557!important}.menu-scene img{filter:drop-shadow(2px 3px 0 #8b755c)!important}.create-screen{background:#ded0b5!important}.paper-form{background:#f6eddc!important;border:2px solid #9e896a!important;box-shadow:3px 3px 0 #c0ae91!important}.register-seal{color:#71383b!important;border-color:#71383b!important}.sheet-paper,.event-paper{background:#f4ead6!important;border:5px double #947d5d!important}.event-choices button{background:#f2e7d3!important;border:2px solid #a59171!important}.event-choices span{background:#74383c!important}.dialogue-lead{background:#e9ddc8!important;border-left-color:#6f3b3e!important;color:#433937!important}.trait-hint{background:#ead8bf!important;color:#6e403d!important}
+
+/* 成熟玩法新增组件 */
+.deadline-list{display:flex;flex-direction:column;gap:8px}.deadline{display:flex;flex-direction:column;gap:4px;padding:10px 11px;border:2px solid #ad9a7c;background:#eee2cc}.deadline b{font-size:13px}.deadline small{font-size:11px;line-height:1.55;color:#6b5f52}.deadline.warn{border-left:5px solid #9a6a36}.deadline.danger{border-left:5px solid #8d3b3d;background:#ebd7ca}.deadline.good{border-left:5px solid #557059}.strategy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.strategy-card{min-height:92px;border:2px solid #a58f70;background:#eadcc3;color:#3e3433;padding:9px 7px;display:grid;grid-template-columns:32px 1fr;grid-template-rows:auto auto;gap:2px 7px;text-align:left;box-shadow:2px 2px 0 #c4b294}.strategy-card>span{grid-row:1/3;width:30px;height:30px;display:grid;place-items:center;background:#6f3a3e;color:#f8e5bd;border:1px solid #542c30;font-weight:900}.strategy-card b{font-size:13px}.strategy-card small{font-size:10px;color:#6b5e52;line-height:1.4}.strategy-card.active{background:#f4e6c9;border-color:#70383c;box-shadow:inset 0 0 0 2px #caa56f}.strategy-card:disabled{opacity:.72}.promise-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:10px}.promise-selected{margin-top:10px;padding:10px;background:#e1d6bd;border-left:4px solid #5c6b5d;font-size:12px;font-weight:700}.inbox-card{padding:12px;background:#e9dcc4;border:2px dashed #977b57}.inbox-card>b{font-size:15px}.inbox-card p{font-size:12px;line-height:1.7;color:#66594f}.inbox-card .folio-btn{display:block;width:100%;margin-top:7px;text-align:left}.after-hours{margin-top:12px;padding:10px;background:#e6d8c0;border-top:2px dotted #9e8768}.after-hours p{font-size:12px;line-height:1.6;margin:0 0 8px}.research-risk{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.research-risk span{font-size:10px;padding:5px 7px;background:#ded1b9;border:1px solid #ac9777;color:#5b4d44}.custom-avatar-box{padding:12px;background:#eadcc5;border:2px dashed #9e8768}.custom-avatar-box p{font-size:12px!important;margin-top:0}.custom-avatar-box input{width:100%;font-size:12px}.custom-avatar-box small{display:block;margin-top:7px;color:#77685a}.rank-competitors{background:#e8deca!important;border:2px solid #a99577!important}.review-notice{background:#ead8c2!important}.status.major,.status.rejected{background:#e9ccc3!important}.status.minor{background:#e7d6aa!important}.flash{background:#352b2d;border:2px solid #9a7652;color:#f5e7c8}
+@media(max-width:365px){.strategy-grid{grid-template-columns:1fr}.promise-row{grid-template-columns:1fr}.strategy-card{min-height:74px}.action-row{min-height:128px}}
+.milestone-list{display:flex;flex-direction:column;gap:7px}.milestone-list>div{display:flex;align-items:center;gap:9px;padding:9px;background:#ead9bd;border:1px solid #ab916d}.milestone-list span{color:#74383c}.milestone-list b{font-size:12px;line-height:1.5}
+
+/* 3.1 人物主动联系与职业经营 */
+.person-letter-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}.person-letter-head .sprite-face{flex:0 0 auto}.person-letter-head small{display:block;color:var(--muted,#77695e);margin-top:3px}.person-letter{border-left:4px solid #7f4a3e}.compact-actions{margin-top:8px}.compact-actions .action-row{min-height:56px}.compact-actions .action-icon{background:#efe5d0;color:#5d3c36;border:1px solid #b79a7c}.compact-actions .action-cost{white-space:nowrap}
+
+/* 3.2 手机节奏校准：减少“后台大卡片”式纵向占用 */
+.action-row{min-height:62px!important;padding:9px 10px!important;grid-template-columns:38px minmax(0,1fr) auto!important}.action-row .action-content b{font-size:13px}.action-row .action-content small{font-size:10px;line-height:1.45}.action-row .action-icon{width:32px;height:32px;display:grid;place-items:center}.compact-actions .action-row{min-height:58px!important}.folio{padding:13px 11px 14px!important}.game-body{padding-bottom:88px!important}@media(max-width:365px){.action-row{min-height:58px!important;padding:8px!important}.hero-portrait{padding:8px!important}.folio{margin-bottom:12px!important}.status-strip small{font-size:9px}}
+/* 3.3 重大节点演出：保持卷宗感，不做浮夸粒子特效。 */
+.milestone-sheet{text-align:center;padding:10px 4px 4px}.milestone-sheet small{letter-spacing:.16em;color:#876f5d}.milestone-sheet h2{font-size:24px;margin:9px 0 6px;color:#3b2928}.milestone-detail{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f2e8d2;border:1px solid #cab997;padding:8px;margin:10px 0;color:#5b4237}.milestone-pixel-seal{width:64px;height:64px;margin:0 auto 10px;display:grid;place-items:center;border:4px double #8e2e2b;color:#8e2e2b;background:#f5e8d7;font-weight:900;font-size:30px;box-shadow:4px 4px 0 #d5c3a1;image-rendering:pixelated;transform:rotate(-2deg)}
+
+/* --- 发行级可读性与动态世界信息 --- */
+:root{--readable-muted:#5f5a50}
+body{font-size:15px}
+.explain,.description,.review-comment,.publication p,.inbox-card p,.form-small,.custom-avatar-box p{font-size:13px!important;line-height:1.75!important}
+.action-content small,.person-meta small,.deadline small,.strategy-card small,.news-list small,.mini-label,.review-notice{font-size:11.5px!important;line-height:1.5}
+.status-strip small{font-size:10.5px}
+.data-line>span,.checklist>div,.student-line{font-size:12.5px}
+.folio-btn{font-size:13px;min-height:44px}
+.navbtn{font-size:11.5px;min-height:58px}
+.world-outlook{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:10px}
+.world-outlook>div{padding:10px;background:#e7ddc8;border:1px solid #b6a487;display:flex;flex-direction:column;gap:4px;min-width:0}
+.world-outlook small{font-size:10.5px;color:#736557}.world-outlook b{font-size:14px;color:#483b33}
+.world-event{padding:10px 11px;margin:0;background:#efe6d4;border-left:4px solid #557059;font-size:13px;line-height:1.75;color:#4f493f}
+.route-metrics{display:grid;grid-template-columns:1fr 1fr;gap:0 12px;margin-bottom:12px}.route-metrics .data-line{min-width:0}
+.person-meta small:first-of-type{line-height:1.45}
+@media(max-width:365px){body{font-size:14px}.explain,.description,.review-comment,.publication p,.inbox-card p,.form-small{font-size:12px!important}.world-outlook{grid-template-columns:1fr 1fr}.route-metrics{grid-template-columns:1fr}.folio-btn{font-size:12px}.status-strip small{font-size:10px}}
+
+.optional-degree{margin-top:10px;border:1px dashed rgba(91,65,54,.35);border-radius:10px;padding:9px 11px;background:rgba(255,250,238,.5)}
+.optional-degree summary{cursor:pointer;font-weight:700;color:#5e4037;min-height:34px;display:flex;align-items:center}
+.save-slots{display:flex;flex-direction:column;gap:9px}.save-slot{padding:10px 11px;background:#ece1cc;border:1px solid #ad997b}.save-slot>b{display:block;font-size:13px}.save-slot>small{display:block;margin:5px 0 8px;font-size:11.5px;color:#675c51}.save-slot .folio-btn{min-width:92px}
+/* 发行前可访问性收口：关键文字与键盘焦点保持可读。 */
+.avatar-choice small,.wardrobe-item small,.badge-option small,.research-risk span,.world-outlook small{font-size:11px!important;line-height:1.45}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #b16d3d;outline-offset:2px}
+@media(max-width:365px){.status-strip small{font-size:11px!important}.navbtn{font-size:11px}.avatar-choice small,.badge-option small{font-size:10.5px!important}}
+
+/* 深度交互与学术社会网 */
+.network-list{display:grid;gap:8px;margin-top:10px}.network-list>div{display:flex;justify-content:space-between;gap:12px;padding:9px 10px;border:1px dashed rgba(91,60,45,.28);background:rgba(255,250,238,.58);font-size:12px}.network-list b{font-weight:700}.network-list span{color:#78665b;text-align:right}.discipline-lab{background:linear-gradient(180deg,rgba(248,240,218,.6),rgba(255,255,255,.35));border:1px solid rgba(123,89,55,.18);padding:12px}.discipline-lab input[type=range]{accent-color:#8e4538}.discipline-lab output{font-variant-numeric:tabular-nums}.world-outlook>div:nth-child(5){border-top:1px dashed rgba(86,62,45,.16);padding-top:8px}.person-card .person-meta small+small{opacity:.8}.sheet-paper .discipline-lab+ .design-summary{margin-top:10px}.event-paper{box-shadow:0 18px 60px rgba(52,32,23,.28)}
+@media(max-width:390px){.network-list>div{font-size:11px}.network-list span{max-width:45%}.discipline-lab{padding:10px}.world-outlook>div{min-width:0}}
+
+/* 4.0 年度目标与成熟团队经营 */
+.goal-grid{display:grid;grid-template-columns:1fr;gap:8px}.goal-card{width:100%;text-align:left;border:2px solid #a58f70;background:#efe2ca;color:#403532;padding:11px 12px;min-height:66px;box-shadow:2px 2px 0 #c6b495}.goal-card b{display:block;font-size:13px;margin-bottom:5px;color:#64383a}.goal-card small{font-size:11.5px;line-height:1.55;color:#665a4e}.goal-card:hover{background:#f5e9d1;border-color:#7d4a43}.annual-goal-current{padding:11px 12px;border-left:5px solid #5c705d;background:#e8dfc9}.annual-goal-current b{font-size:15px}.annual-goal-current p{font-size:12.5px;line-height:1.7;margin:7px 0}.annual-goal-current small{color:#665e53}.goal-history{display:flex;flex-direction:column;gap:5px;margin-top:10px}.goal-history span{font-size:11px;padding:7px 8px;border:1px dashed #b6a184;background:#f5ead7}.goal-history .good{border-left:4px solid #58705b}.goal-history .miss{border-left:4px solid #9a5b43}.team-plan-summary{padding:11px 12px;background:#e9ddc7;border:2px solid #a99170;display:flex;flex-direction:column;gap:6px}.team-plan-summary b{font-size:13px}.team-plan-summary small{font-size:11.5px;line-height:1.55;color:#675b4d}.team-plan-editor{display:flex;flex-direction:column;gap:11px;margin:12px 0}.team-plan-editor label{display:grid;grid-template-columns:82px 1fr 28px;align-items:center;gap:8px;font-size:12px}.team-plan-editor input[type=range]{width:100%;accent-color:#6e3a3d}.team-plan-editor output{text-align:right;font-weight:800;color:#6b393b}.design-summary{padding:8px 9px;background:#eee2cc;border:1px solid #b6a080;font-size:11.5px;line-height:1.5}.rank-competitors .data-line span{max-width:76%;line-height:1.45}
+@media(min-width:400px){.goal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.goal-card{min-height:108px}}
+@media(max-width:365px){.team-plan-editor label{grid-template-columns:72px 1fr 24px}.goal-card{padding:10px}}
+
+/* 4.1 轻量演出：保留像素卷宗质感，尊重减少动态偏好 */
+@keyframes folioIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}@keyframes sealPop{0%{opacity:0;transform:scale(.7) rotate(-8deg)}70%{opacity:1;transform:scale(1.06) rotate(-1deg)}100%{transform:scale(1) rotate(-2deg)}}
+.folio{animation:folioIn .18s ease-out both}.milestone-pixel-seal{animation:sealPop .35s steps(5,end) both}.event-paper,.sheet-paper{animation:folioIn .16s ease-out both}
+@media(prefers-reduced-motion:reduce){.folio,.milestone-pixel-seal,.event-paper,.sheet-paper{animation:none!important}.folio-btn,.action-row{transition:none!important}}
